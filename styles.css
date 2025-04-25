@@ -1,19 +1,28 @@
 /* General */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    background-color: #FFF8DC; /* Fondo suave */
+    background-color: #FFF8DC; /* Fondo beige */
     color: #333;
 }
 
 header {
     text-align: center;
-    background-color: #8B0000;
-    color: white;
+    background-color: #FFE4E1; /* Rosa claro */
+    color: #555;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
 }
 
 /* Menú de navegación */
@@ -21,24 +30,24 @@ header {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 10px;
     gap: 15px;
-    background-color: #8B0000;
+    padding: 10px;
+    background-color: #B0E0E6; /* Azul pastel */
     border-radius: 8px;
+    margin: 0;
 }
 
 .nav a {
     text-decoration: none;
-    color: white;
+    color: #333;
     padding: 10px 20px;
-    background-color: #A52A2A;
+    background-color: #AFEEEE; /* Azul claro */
     border-radius: 8px;
     transition: background-color 0.3s;
 }
 
 .nav a:hover {
-    background-color: #D2691E;
+    background-color: #ADD8E6; /* Azul más claro */
 }
 
 /* Sección general */
@@ -46,7 +55,7 @@ header {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: white;
+    background: #FFF;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -55,9 +64,9 @@ header {
 /* Galería */
 .gallery {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .gallery img {
@@ -75,7 +84,7 @@ form {
     align-items: center;
 }
 
-input, button {
+input, textarea, button {
     padding: 10px;
     width: 100%;
     max-width: 300px;
@@ -84,7 +93,7 @@ input, button {
 }
 
 button {
-    background-color: #8B0000;
+    background-color: #FFB6C1; /* Rosa claro */
     color: white;
     border: none;
     cursor: pointer;
@@ -92,17 +101,5 @@ button {
 }
 
 button:hover {
-    background-color: #A52A2A;
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .gallery img {
-        max-width: 100%;
-    }
+    background-color: #FF69B4; /* Rosa más fuerte */
 }
