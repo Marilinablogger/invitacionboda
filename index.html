@@ -7,34 +7,39 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Música de Fondo -->
-  <audio autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio.
-  </audio>
-
+  <!-- Encabezado con imagen de fondo y navegación -->
   <header class="header">
-    <h1>¡Nos Casamos!</h1>
-    <p>Te invitamos a celebrar con nosotros este día especial.</p>
+    <nav class="nav">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#detalles">Detalles</a></li>
+        <li><a href="#galeria">Galería de Fotos</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+      </ul>
+    </nav>
+    <div class="header-content">
+      <h1>¡Te invitamos a nuestra boda!</h1>
+      <p>15 de Junio de 2025</p>
+    </div>
   </header>
 
-  <!-- Información del evento -->
-  <section class="evento">
-    <h2>Información del Evento</h2>
+  <!-- Sección Inicio -->
+  <section id="inicio" class="inicio">
+    <h2>Bienvenido a nuestra invitación</h2>
+    <p>Estamos encantados de que formes parte de este día tan especial.</p>
+  </section>
+
+  <!-- Sección Detalles -->
+  <section id="detalles" class="evento">
+    <h2>Detalles del Evento</h2>
     <p><strong>Fecha:</strong> 15 de Junio de 2025</p>
     <p><strong>Hora:</strong> 18:00</p>
     <p><strong>Lugar:</strong> Salón de Eventos "La Alegría"</p>
     <a href="https://maps.google.com" target="_blank" class="map-link">Ver en el mapa</a>
   </section>
 
-  <!-- Contador Regresivo -->
-  <section class="contador">
-    <h2>¡Faltan!</h2>
-    <div id="countdown"></div>
-  </section>
-
-  <!-- Galería de Fotos -->
-  <section class="galeria">
+  <!-- Sección Galería -->
+  <section id="galeria" class="galeria">
     <h2>Galería de Fotos</h2>
     <div class="imagenes">
       <img src="foto1.jpg" alt="Foto 1">
@@ -43,8 +48,8 @@
     </div>
   </section>
 
-  <!-- Confirmación de Asistencia -->
-  <section class="rsvp">
+  <!-- Sección RSVP -->
+  <section id="rsvp" class="rsvp">
     <h2>Confirma tu Asistencia</h2>
     <form action="submit_rsvp.php" method="POST">
       <label for="nombre">Nombre:</label>
@@ -52,18 +57,6 @@
       <label for="email">Correo Electrónico:</label>
       <input type="email" id="email" name="email" required>
       <button type="submit">Confirmar</button>
-    </form>
-  </section>
-
-  <!-- Mensajes y Propuestas de Canciones -->
-  <section class="mensajes">
-    <h2>Déjanos un mensaje o una canción</h2>
-    <form action="submit_message.php" method="POST">
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" required></textarea>
-      <label for="cancion">Propuesta de Canción:</label>
-      <input type="text" id="cancion" name="cancion">
-      <button type="submit">Enviar</button>
     </form>
   </section>
 
