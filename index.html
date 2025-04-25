@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación de Boda</title>
+    <title>Invitación a la Boda de María y Juan</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Música de fondo -->
+    <audio autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
     <!-- Encabezado -->
     <header class="header">
-        <h1>¡Estás Invitado!</h1>
-        <p>15 de Junio de 2025</p>
+        <h1>¡Estás Invitado a la boda de María y Juan!</h1>
+        <p>24 de Mayo de 2025</p>
     </header>
+
+    <!-- Contador regresivo -->
+    <section class="contador">
+        <iframe ancho="300" alto="154" src="https://w2.countingdownto.com/6248786" frameborder="0"></iframe>
+    </section>
 
     <!-- Menú de navegación -->
     <nav class="nav">
@@ -26,24 +37,28 @@
     <!-- Sección de inicio -->
     <section id="inicio" class="section">
         <h2>Bienvenido</h2>
-        <p>Estamos encantados de invitarte a nuestro día especial.</p>
+        <p>Estamos encantados de invitarte a compartir nuestro día especial.</p>
     </section>
 
     <!-- Sección de detalles -->
     <section id="detalles" class="section">
         <h2>Detalles del Evento</h2>
-        <p><strong>Fecha:</strong> 15 de Junio de 2025</p>
+        <p><strong>Fecha:</strong> 24 de Mayo de 2025</p>
         <p><strong>Hora:</strong> 18:00</p>
-        <p><strong>Lugar:</strong> Salón de Eventos "La Alegría"</p>
+        <p><strong>Lugar:</strong> Golf Club Mendoza</p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.497456450324!2d-68.845838925546!3d-32.88945157889761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e089a1e3e55b5%3A0xe008d1a6eb3d7af!2sGolf%20Club%20Mendoza!5e0!3m2!1ses!2sar!4v1615738038315!5m2!1ses!2sar"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <!-- Sección de galería -->
     <section id="galeria" class="section">
         <h2>Galería</h2>
         <div class="gallery">
-            <img src="foto1.jpg" alt="Foto 1">
-            <img src="foto2.jpg" alt="Foto 2">
-            <img src="foto3.jpg" alt="Foto 3">
+            <img src="https://via.placeholder.com/200" alt="Foto 1">
+            <img src="https://via.placeholder.com/200" alt="Foto 2">
+            <img src="https://via.placeholder.com/200" alt="Foto 3">
+            <img src="https://via.placeholder.com/200" alt="Foto 4">
         </div>
     </section>
 
@@ -55,6 +70,10 @@
             <input type="text" id="nombre" name="nombre" required>
             <label for="email">Correo Electrónico:</label>
             <input type="email" id="email" name="email" required>
+            <label for="cancion">Sugerencia de Canción:</label>
+            <input type="text" id="cancion" name="cancion">
+            <label for="mensaje">Deja un Mensaje:</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
             <button type="submit">Confirmar</button>
         </form>
     </section>
