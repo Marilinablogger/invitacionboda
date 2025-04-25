@@ -1,178 +1,83 @@
-/* General styles */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fffaf6; /* Fondo blanco cálido */
-  color: #b08862; /* Letra dorada */
-  line-height: 1.6;
-}
-
-h1, h2 {
-  text-align: center;
-  color: #b08862; /* Letra dorada */
-  margin-bottom: 0.5em;
-}
-
-p {
-  margin: 0.5em 0;
-  text-align: center;
-  color: #b08862; /* Letra dorada */
-}
-
-/* Header con imagen de fondo */
-.header {
-  background: url('header-bg.jpg') no-repeat center center/cover;
-  height: 300px;
-  color: #b08862; /* Letra dorada */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-
-.header-content {
-  z-index: 1;
-}
-
-.header h1 {
-  font-size: 2.5em;
-  margin: 0;
-}
-
-.header p {
-  font-size: 1.2em;
-}
-
-/* Navegación */
-.nav {
-  background-color: #f8d7e4; /* Fondo rosa pastel */
-  text-align: center;
-  padding: 0.5em 0;
-}
-
+/* Estilos para el menú de navegación */
 .nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
+    list-style: none; /* Quitar puntos de lista */
+    padding: 0;
+    display: flex; /* Mostrar los elementos en línea */
+    justify-content: center; /* Centrar el menú */
+    gap: 15px; /* Espaciado entre botones */
+    margin: 20px 0;
 }
 
-.nav ul li {
-  margin: 0;
+.nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none; /* Quitar subrayado */
+    color: white;
+    background-color: #8B0000; /* Color de fondo */
+    border-radius: 25px; /* Botones redondeados */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.nav ul li a {
-  color: #b08862; /* Letra dorada */
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+.nav a:hover {
+    background-color: #A52A2A; /* Color más claro al pasar el mouse */
 }
 
-.nav ul li a:hover {
-  background-color: #f4c2d1; /* Rosa pastel más claro */
+/* Marco y diseño responsivo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF8DC; /* Fondo suave */
 }
 
-/* Sección Inicio */
-.inicio {
-  padding: 2em 1em;
-  text-align: center;
-  background-color: #fffaf6; /* Fondo blanco cálido */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: #8B0000;
+    color: white;
+    border-radius: 15px;
+    margin: 15px auto;
+    max-width: 800px; /* Ancho máximo */
 }
 
-/* Sección Evento */
-.evento {
-  padding: 1.5em;
-  background-color: #fce4ec; /* Fondo rosa pastel suave */
-  border-radius: 10px;
-  margin: 2em auto;
-  max-width: 600px;
-  text-align: center;
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px; /* Ancho máximo para la sección */
+    background: white;
+    border: 2px solid #8B0000;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-.evento a.map-link {
-  display: inline-block;
-  margin-top: 1em;
-  padding: 0.5em 1em;
-  background-color: #f8d7e4; /* Fondo rosa pastel */
-  color: #b08862; /* Letra dorada */
-  text-decoration: none;
-  border-radius: 5px;
+/* Galería de imágenes */
+.galeria .imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-.evento a.map-link:hover {
-  background-color: #f4c2d1; /* Rosa pastel más claro */
+.galeria img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Sección Galería */
-.galeria {
-  padding: 1.5em;
-  background-color: #fffaf6; /* Fondo blanco cálido */
-  margin: 2em auto;
-  max-width: 800px;
-  text-align: center;
-}
-
-.galeria .imagenes img {
-  width: 100%;
-  max-width: 200px;
-  margin: 0.5em;
-  border-radius: 10px;
-  border: 2px solid #f8d7e4; /* Rosa pastel */
-}
-
-.galeria .imagenes img:hover {
-  border-color: #f4c2d1; /* Rosa pastel más claro */
-}
-
-/* Sección RSVP */
-.rsvp {
-  padding: 1.5em;
-  background-color: #fce4ec; /* Fondo rosa pastel suave */
-  border-radius: 10px;
-  margin: 2em auto;
-  max-width: 600px;
-  text-align: center;
-}
-
-.rsvp form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.rsvp input, .rsvp button {
-  padding: 0.5em;
-  font-size: 1em;
-  border: 1px solid #f8d7e4; /* Rosa pastel */
-  border-radius: 5px;
-  width: 100%;
-}
-
-.rsvp button {
-  background-color: #f8d7e4; /* Fondo rosa pastel */
-  color: #b08862; /* Letra dorada */
-  cursor: pointer;
-}
-
-.rsvp button:hover {
-  background-color: #f4c2d1; /* Rosa pastel más claro */
-}
-
-/* Responsive Design */
+/* Responsividad */
 @media (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    gap: 0.5em;
-  }
+    .nav ul {
+        flex-direction: column; /* Botones apilados en pantallas pequeñas */
+        gap: 10px;
+    }
 
-  .galeria .imagenes img {
-    max-width: 150px;
-  }
+    section {
+        padding: 15px;
+    }
+
+    .header {
+        padding: 15px;
+    }
 }
