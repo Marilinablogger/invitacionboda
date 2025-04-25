@@ -1,66 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invitación de Boda</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación</title>
+    <style>
+        /* Estilos para enmarcar y hacer responsivo */
+        .invitacion {
+            max-width: 600px; /* Ancho máximo para pantallas grandes */
+            margin: 20px auto; /* Centrar horizontalmente */
+            padding: 20px; /* Espaciado interno */
+            border: 5px solid #8B0000; /* Borde enmarcado */
+            border-radius: 15px; /* Esquinas redondeadas */
+            background-color: #FFF8DC; /* Color de fondo */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+            text-align: center; /* Centrar texto */
+            font-family: 'Arial', sans-serif; /* Fuente */
+        }
+
+        .invitacion h1 {
+            color: #8B0000; /* Color del texto del título */
+            margin-bottom: 10px;
+        }
+
+        .invitacion p {
+            color: #333; /* Color del texto */
+            font-size: 1.1em; /* Tamaño del texto */
+            line-height: 1.5; /* Altura de línea */
+        }
+
+        @media (max-width: 768px) {
+            /* Ajustes para pantallas pequeñas */
+            .invitacion {
+                padding: 15px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Encabezado con imagen de fondo -->
-  <header class="header">
-    <div class="header-content">
-      <h1>¡Te invitamos a nuestra boda!</h1>
-      <p>15 de Junio de 2025</p>
+    <div class="invitacion">
+        <h1>¡Estás Invitado!</h1>
+        <p>Nos complace invitarte a nuestra boda el día <strong>15 de junio de 2025</strong>, a las <strong>5:00 PM</strong>.</p>
+        <p>El evento tendrá lugar en el <strong>Salón de Fiestas Magnolia</strong>, ubicado en <strong>Calle Principal 123, Ciudad Bella</strong>.</p>
+        <p>Por favor confirma tu asistencia antes del <strong>1 de junio de 2025</strong>.</p>
     </div>
-
-  <!-- Botones de navegación -->
-  <nav class="nav">
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#detalles">Detalles</a></li>
-      <li><a href="#galeria">Galería de Fotos</a></li>
-      <li><a href="#rsvp">RSVP</a></li>
-    </ul>
-  </nav>
-
-  <!-- Sección Inicio -->
-  <section id="inicio" class="inicio">
-    <h2>Bienvenido a nuestra invitación</h2>
-    <p>Estamos encantados de que formes parte de este día tan especial.</p>
-  </section>
-
-  <!-- Sección Detalles -->
-  <section id="detalles" class="evento">
-    <h2>Detalles del Evento</h2>
-    <p><strong>Fecha:</strong> 15 de Junio de 2025</p>
-    <p><strong>Hora:</strong> 18:00</p>
-    <p><strong>Lugar:</strong> Salón de Eventos "La Alegría"</p>
-    <a href="https://maps.google.com" target="_blank" class="map-link">Ver en el mapa</a>
-  </section>
-
-  <!-- Sección Galería -->
-  <section id="galeria" class="galeria">
-    <h2>Galería de Fotos</h2>
-    <div class="imagenes">
-      <img src="foto1.jpg" alt="Foto 1">
-      <img src="foto2.jpg" alt="Foto 2">
-      <img src="foto3.jpg" alt="Foto 3">
-    </div>
-  </section>
-
-  <!-- Sección RSVP -->
-  <section id="rsvp" class="rsvp">
-    <h2>Confirma tu Asistencia</h2>
-    <form action="submit_rsvp.php" method="POST">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
-      <label for="email">Correo Electrónico:</label>
-      <input type="email" id="email" name="email" required>
-      <button type="submit">Confirmar</button>
-    </form>
-  </section>
-
-  <script src="script.js"></script>
 </body>
 </html>
