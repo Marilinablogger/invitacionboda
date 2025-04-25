@@ -1,0 +1,176 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  background-color: #008cba;
+  color: #fff;
+  padding: 2em 1em;
+  text-align: center;
+  border-bottom: 4px solid #005f8a;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* Event Info Section */
+.evento {
+  padding: 1.5em;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 2em auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.evento a.map-link {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: #008cba;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.evento a.map-link:hover {
+  background-color: #005f8a;
+}
+
+/* Countdown Section */
+.contador {
+  padding: 1.5em;
+  margin: 2em auto;
+  text-align: center;
+  max-width: 600px;
+}
+
+#countdown {
+  font-size: 2em;
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* Gallery Section */
+.galeria {
+  padding: 1.5em;
+  background-color: #f1f1f1;
+  margin: 2em auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.galeria .imagenes img {
+  width: 100%;
+  max-width: 200px;
+  margin: 0.5em;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+.galeria .imagenes img:hover {
+  border-color: #008cba;
+}
+
+/* RSVP Section */
+.rsvp {
+  padding: 1.5em;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 2em auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.rsvp form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.rsvp input, .rsvp button {
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.rsvp button {
+  background-color: #008cba;
+  color: #fff;
+  cursor: pointer;
+}
+
+.rsvp button:hover {
+  background-color: #005f8a;
+}
+
+/* Messages Section */
+.mensajes {
+  padding: 1.5em;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 2em auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.mensajes form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.mensajes textarea, .mensajes input, .mensajes button {
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.mensajes button {
+  background-color: #008cba;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mensajes button:hover {
+  background-color: #005f8a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .evento, .contador, .galeria, .rsvp, .mensajes {
+    padding: 1em;
+    margin: 1em auto;
+  }
+
+  .galeria .imagenes img {
+    max-width: 150px;
+  }
+}
