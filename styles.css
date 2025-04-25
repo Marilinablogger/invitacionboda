@@ -10,7 +10,7 @@ body {
 
 h1, h2 {
   text-align: center;
-  color: #444;
+  color: #fff;
   margin-bottom: 0.5em;
 }
 
@@ -19,13 +19,21 @@ p {
   text-align: center;
 }
 
-/* Header */
+/* Header con imagen de fondo */
 .header {
-  background-color: #008cba;
-  color: #fff;
-  padding: 2em 1em;
+  background: url('media/header-bg.jpg') no-repeat center center/cover;
+  height: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  border-bottom: 4px solid #005f8a;
+  position: relative;
+}
+
+.header-content {
+  z-index: 1;
 }
 
 .header h1 {
@@ -33,11 +41,52 @@ p {
   margin: 0;
 }
 
-/* Event Info Section */
+.header p {
+  font-size: 1.2em;
+}
+
+/* Navegación */
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+.nav ul li {
+  margin: 0 1em;
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sección Inicio */
+.inicio {
+  padding: 2em 1em;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* Sección Evento */
 .evento {
   padding: 1.5em;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #f1f1f1;
   border-radius: 10px;
   margin: 2em auto;
   max-width: 600px;
@@ -58,24 +107,10 @@ p {
   background-color: #005f8a;
 }
 
-/* Countdown Section */
-.contador {
-  padding: 1.5em;
-  margin: 2em auto;
-  text-align: center;
-  max-width: 600px;
-}
-
-#countdown {
-  font-size: 2em;
-  color: #e63946;
-  font-weight: bold;
-}
-
-/* Gallery Section */
+/* Sección Galería */
 .galeria {
   padding: 1.5em;
-  background-color: #f1f1f1;
+  background-color: #fff;
   margin: 2em auto;
   max-width: 800px;
   text-align: center;
@@ -93,11 +128,10 @@ p {
   border-color: #008cba;
 }
 
-/* RSVP Section */
+/* Sección RSVP */
 .rsvp {
   padding: 1.5em;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #f8f9fa;
   border-radius: 10px;
   margin: 2em auto;
   max-width: 600px;
@@ -128,46 +162,10 @@ p {
   background-color: #005f8a;
 }
 
-/* Messages Section */
-.mensajes {
-  padding: 1.5em;
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  margin: 2em auto;
-  max-width: 600px;
-  text-align: center;
-}
-
-.mensajes form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.mensajes textarea, .mensajes input, .mensajes button {
-  padding: 0.5em;
-  font-size: 1em;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 100%;
-}
-
-.mensajes button {
-  background-color: #008cba;
-  color: #fff;
-  cursor: pointer;
-}
-
-.mensajes button:hover {
-  background-color: #005f8a;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .evento, .contador, .galeria, .rsvp, .mensajes {
-    padding: 1em;
-    margin: 1em auto;
+  .nav ul {
+    flex-direction: column;
   }
 
   .galeria .imagenes img {
