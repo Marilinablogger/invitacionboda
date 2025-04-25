@@ -1,83 +1,108 @@
-/* Estilos para el menú de navegación */
-.nav ul {
-    list-style: none; /* Quitar puntos de lista */
-    padding: 0;
-    display: flex; /* Mostrar los elementos en línea */
-    justify-content: center; /* Centrar el menú */
-    gap: 15px; /* Espaciado entre botones */
-    margin: 20px 0;
-}
-
-.nav a {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none; /* Quitar subrayado */
-    color: white;
-    background-color: #8B0000; /* Color de fondo */
-    border-radius: 25px; /* Botones redondeados */
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.nav a:hover {
-    background-color: #A52A2A; /* Color más claro al pasar el mouse */
-}
-
-/* Marco y diseño responsivo */
+/* General */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #FFF8DC; /* Fondo suave */
+    color: #333;
 }
 
-.header {
+header {
     text-align: center;
-    padding: 20px;
-    background: #8B0000;
+    background-color: #8B0000;
     color: white;
-    border-radius: 15px;
-    margin: 15px auto;
-    max-width: 800px; /* Ancho máximo */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 
-section {
+/* Menú de navegación */
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    gap: 15px;
+    background-color: #8B0000;
+    border-radius: 8px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: #A52A2A;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.nav a:hover {
+    background-color: #D2691E;
+}
+
+/* Sección general */
+.section {
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    max-width: 800px; /* Ancho máximo para la sección */
     background: white;
-    border: 2px solid #8B0000;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Galería de imágenes */
-.galeria .imagenes {
+/* Galería */
+.gallery {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.galeria img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+.gallery img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+input, button {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #A52A2A;
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
     .nav ul {
-        flex-direction: column; /* Botones apilados en pantallas pequeñas */
+        flex-direction: column;
         gap: 10px;
     }
 
-    section {
-        padding: 15px;
-    }
-
-    .header {
-        padding: 15px;
+    .gallery img {
+        max-width: 100%;
     }
 }
