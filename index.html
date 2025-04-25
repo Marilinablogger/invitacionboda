@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación de Boda</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fffaf7;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-image: url('https://www.pexels.com/es-es/foto/31718061/'); /* Reemplazar con la imagen real */
+      background-size: cover;
+      background-position: center;
+      padding: 4rem 2rem;
+      color: white;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+    .section {
+      padding: 2rem 1rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      margin-top: 1rem;
+      background-color: #e91e63;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 300px;
+      margin-top: 1rem;
+    }
+    input, textarea {
+      width: 80%;
+      margin: 0.5rem auto;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: block;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>¡María & Juan se casan!</h1>
+    <h2>24 de Mayo de 2025 - Golf Club Mendoza</h2>
+  </header>
+
+  <div class="section">
+    <h3>¿Dónde será?</h3>
+    <a class="button" href="https://www.google.com/maps?q=Golf+Club+Mendoza" target="_blank">Ver en Google Maps</a>
+  </div>
+
+  <div class="section">
+    <h3>Contador regresivo</h3>
+    <!-- Puedes reemplazar este iframe con uno real de tickcounter.com -->
+    <iframe width="300" height="154" src="https://w2.countingdownto.com/6248994" frameborder="0"></iframe>
+
+  <div class="section">
+    <h3>Confirmá tu asistencia</h3>
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="number" placeholder="Cantidad de acompañantes" required>
+      <input type="email" placeholder="Tu correo electrónico">
+      <button class="button" type="submit">Confirmar asistencia</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h3>¿Qué canciones no pueden faltar?</h3>
+    <textarea placeholder="Escribí las canciones que querés escuchar"></textarea>
+    <button class="button">Enviar sugerencias</button>
+  </div>
+
+  <div class="section">
+    <h3>Galería de fotos</h3>
+    <div class="gallery">
+      <!-- Podés reemplazar estas imágenes con las reales -->
+      <img src="https://www.pexels.com/es-es/foto/31718061/" alt="foto">
+      <img src="https://www.pexels.com/es-es/foto/momento-romantico-de-boda-con-anillos-y-ramo-29175678/" alt="foto">
+      <img src="https://www.pexels.com/es-es/foto/elegante-retrato-de-boda-de-los-novios-31718059/" alt="foto">
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Dejanos tus deseos 💌</h3>
+    <textarea placeholder="Escribí tus buenos deseos para María y Juan"></textarea>
+    <button class="button">Enviar mensaje</button>
+  </div>
+</body>
+</html>
